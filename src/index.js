@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import App from './components/root/App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Provider} from "react-redux"//provider bir kapsayıcıdır. Ana componentimizde store'u kullanabilmemiz için bir kapsayıcıya ihtiyacımız vardı.
+import  configureStore from "./redux/reducers/configureStore"
+import "alertifyjs/build/css/alertify.min.css"
+import {BrowserRouter as Router} from "react-router-dom"
+const store = configureStore() //store'u bir nesneye atadık.
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     <Router> <Provider store={store}><App /></Provider></Router>
+     {//BrowserRouter ile appjs'te router işlemleri gerçekleşecek diyorum.
+      //oluşturduğumuz store nesnesini tüm uygulamada kullanabilmemiz için provider'ın içinden ana componente aktardık.
+    }
+   
   </React.StrictMode>,
   document.getElementById('root')
 );

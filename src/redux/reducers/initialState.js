@@ -1,3 +1,6 @@
 export default {
-    currentCategory: {}
+    currentCategory:{},//burası obje
+    categories: [],//buraya sıralı veriler gelecek. array
+    products:[],
+    cart: []
 }

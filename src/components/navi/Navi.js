@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {Navbar, NavbarBrand,NavbarToggler, NavItem, NavLink, UncontrolledDropdown, DropdownItem, DropdownToggle,
-  Collapse, Nav, DropdownMenu, NavbarText} from 'reactstrap'
+import {Navbar, NavbarBrand,NavbarToggler, NavItem, NavLink,Collapse, Nav,  NavbarText} from 'reactstrap'
+import CartSummary from '../cart/CartSummary';
 
 export default class Navi extends Component {
   render() {
@@ -30,29 +30,8 @@ export default class Navi extends Component {
             GitHub
           </NavLink>
         </NavItem>
-        <UncontrolledDropdown
-          inNavbar
-          nav
-        >
-          <DropdownToggle
-            caret
-            nav
-          >
-            Options
-          </DropdownToggle>
-          <DropdownMenu right>
-            <DropdownItem>
-              Option 1
-            </DropdownItem>
-            <DropdownItem>
-              Option 2
-            </DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>
-              Reset
-            </DropdownItem>
-          </DropdownMenu>
-        </UncontrolledDropdown>
+       <CartSummary />{//cartSummary'i navbar kısmına ekledik.
+       }
       </Nav>
       <NavbarText>
         Simple Text
