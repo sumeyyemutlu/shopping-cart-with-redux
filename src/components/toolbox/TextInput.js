@@ -1,12 +1,12 @@
 import React from "react";
 
-const TextInput = ({name, lable, onChange,placeHolder, value, error})=> {
+const TextInput = ({name, label, onChange,placeHolder, value, error})=> {
     let wrapperClass ="from-group";
     if(error && error.length > 0) {//eğer error varsa 
         wrapperClass += "has-error";
     }
     return(
-        <div className="wrapperClass">
+        <div className={wrapperClass}>
             <label htmlFor={name} />
             <div className="field">
                 <input className="form-control"

@@ -7,8 +7,9 @@ import  {Link} from  'react-router-dom';
 import alertify  from "alertifyjs";
 
  class CartSummary extends Component {
+
   removeFromCart(product) {//sepetten ürünleri silmek için fonksiyon tanımladık.
-    //onclick işlemi için bir fonksiyon dönmesi gerektiğinden
+    //onclick işlemine fonksiyon vermek daha mantıklı çünkü birden fazla şeyi gönderebilme imkan sunuyor.
      this.props.actions.removeFromCart(product);
      alertify.error(product.productName +" sepetten silindi!",2)
 }
